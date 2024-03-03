@@ -12,6 +12,7 @@ If you want to run the script for yourself and see the graph, you just need nump
 
 ### Arduinio function
 If you just want the function to copy paste into your code
+the parameter x is basically ```analogRead(PIN)``` to read the pin the force sensor is connected to
 ```
 double polynomial(double x) {
   double y = 0.03550409483919946 
