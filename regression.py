@@ -11,18 +11,21 @@ y_total = y + y_small
 
 assert len(x_total) == len(y_total)
 
+#data increases so sorting it is fine 
 x_total.sort()
 y_total.sort()
 
 x_total = np.array(x_total)
 y_total = np.array(y_total)
 
-coeffs = np.polyfit(x_total, y_total, 5)
+#get a polynomial function
+coefficents = np.polyfit(x_total, y_total, 5)
 
-y_fit = np.polyval(coeffs, x_total)
+y_fit = np.polyval(coefficents, x_total)
 
+#string to store the coefficients
 poly_str = "y = "
-for i, coeff in enumerate(reversed(coeffs)):
+for i, coeff in enumerate(reversed(coefficents)):
     if i == 0:
         poly_str += f"{coeff}"
     elif i == 1:
