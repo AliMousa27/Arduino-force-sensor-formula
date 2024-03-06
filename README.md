@@ -12,15 +12,15 @@ If you want to run the script for yourself and see the graph, you just need nump
 
 ### Arduinio function
 If you just want the function to copy paste into your code
-the parameter x is basically ```analogRead(PIN)``` to read the pin the force sensor is connected to
+the parameter reading is basically ```analogRead(PIN)``` to read the pin the force sensor is connected to
 ```
-double polynomial(double x) {
+double get_force_in_newton(double reading) {
   double y = 0.03550409483919946 
-           + 0.005699338211384924 * x 
-           - 2.4244948469120643e-05 * pow(x, 2) 
-           + 2.86084887870513e-07 * pow(x, 3) 
-           - 6.193324080239549e-10 * pow(x, 4) 
-           + 5.844506382269629e-13 * pow(x, 5);
+           + 0.005699338211384924 * reading 
+           - 2.4244948469120643e-05 * pow(reading, 2) 
+           + 2.86084887870513e-07 * pow(reading, 3) 
+           - 6.193324080239549e-10 * pow(reading, 4) 
+           + 5.844506382269629e-13 * pow(reading, 5);
   return y;
 }
 ```
